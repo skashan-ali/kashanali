@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kashan Ali | Professional Profiles</title>
+    <!-- Tailwind CSS for modern, responsive styling without overhead -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        /* Smooth gradient animation for a premium tech feel */
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .animated-bg {
+            background: linear-gradient(-45deg, #0f172a, #1e1b4b, #111827, #0f172a);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+        }
+    </style>
+</head>
+
+<body class="animated-bg text-slate-100 min-h-screen flex flex-col justify-between font-sans">
+
+    <!-- Main Content -->
+    <main class="flex-grow flex items-center justify-center px-4 py-12">
+        <div class="max-w-4xl w-full text-center space-y-8">
+
+            <!-- Header Section -->
+            <div class="space-y-3">
+                <h1
+                    class="text-4xl md:text-5xl font-extrabold tracking-tight bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent">
+                    Kashan Ali
+                </h1>
+                <p class="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto font-light">
+                    Cloud & Infrastructure Architect specializing in automated deployments, robust system design, and
+                    continuous delivery pipelines.
+                </p>
+            </div>
+
+            <!-- CV Selection Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-6">
+
+                <!-- DevOps Specialist Card -->
+                <a href="cv-devops.html"
+                    class="group relative block p-6 bg-slate-900/60 border border-slate-800 rounded-2xl transition-all duration-300 hover:border-blue-500/50 hover:bg-slate-900/90 hover:-translate-y-1 shadow-xl hover:shadow-blue-500/10">
+                    <div class="mb-4 text-blue-400 group-hover:scale-110 transition-transform duration-300">
+                        <!-- Code/CI-CD Icon -->
+                        <svg class="w-10 h-10 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h2 class="text-xl font-bold mb-2 text-slate-200 group-hover:text-blue-400 transition-colors">DevOps
+                        Specialist</h2>
+                    <p class="text-sm text-slate-400">Focusing on CI/CD pipelines, IaC automation, containerization, and
+                        DevSecOps practices.</p>
+                </a>
+
+                <!-- Cloud Solution Architect Card -->
+                <a href="cv-cloud-architect.html"
+                    class="group relative block p-6 bg-slate-900/60 border border-slate-800 rounded-2xl transition-all duration-300 hover:border-indigo-500/50 hover:bg-slate-900/90 hover:-translate-y-1 shadow-xl hover:shadow-indigo-500/10">
+                    <div class="mb-4 text-indigo-400 group-hover:scale-110 transition-transform duration-300">
+                        <!-- Cloud Infrastructure Icon -->
+                        <svg class="w-10 h-10 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10">
+                            </path>
+                        </svg>
+                    </div>
+                    <h2 class="text-xl font-bold mb-2 text-slate-200 group-hover:text-indigo-400 transition-colors">
+                        Solution Architect</h2>
+                    <p class="text-sm text-slate-400">Designing scalable, highly-available, secure, and cost-optimized
+                        cloud architectures.</p>
+                </a>
+
+                <!-- CloudOps Specialist Card -->
+                <a href="cv-cloudops.html"
+                    class="group relative block p-6 bg-slate-900/60 border border-slate-800 rounded-2xl transition-all duration-300 hover:border-purple-500/50 hover:bg-slate-900/90 hover:-translate-y-1 shadow-xl hover:shadow-purple-500/10">
+                    <div class="mb-4 text-purple-400 group-hover:scale-110 transition-transform duration-300">
+                        <!-- Network/Operations Icon -->
+                        <svg class="w-10 h-10 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 002 2h2a2 2 0 002-2z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h2 class="text-xl font-bold mb-2 text-slate-200 group-hover:text-purple-400 transition-colors">
+                        CloudOps Specialist</h2>
+                    <p class="text-sm text-slate-400">Emphasizing cloud monitoring, cost optimization, reliability
+                        engineering, and governance.</p>
+                </a>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer
+        class="text-center py-6 text-xs text-slate-500 border-t border-slate-900/80 bg-slate-950/20 backdrop-blur-sm">
+        <p>&copy; 2026 Kashan Ali. Powered by Azure Blob Storage.</p>
+    </footer>
+
+</body>
+
+</html>
