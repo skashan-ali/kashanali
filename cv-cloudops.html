@@ -4,627 +4,884 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kashan Ali - Cloud Operations Engineer</title>
+    <title>Kashan Ali — CloudOps Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        * {
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
+        }
+
+        :root {
+            --dark: #0F172A;
+            --sidebar: #1E293B;
+            --accent: #0EA5E9;
+            --accent2: #38BDF8;
+            --page: #F1F5F9;
+            --card: #FFFFFF;
+            --text: #1E293B;
+            --muted: #64748B;
+            --border: #E2E8F0;
+            --ice: #F0F9FF;
+            --sidebar-w: 248px;
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #00b4db 0%, #0083b0 100%);
-            color: #333;
+            font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+            background: var(--page);
+            color: var(--text);
+            font-size: 13px;
             line-height: 1.6;
             min-height: 100vh;
-            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 32px 16px 60px;
         }
 
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        .cv {
+            width: 100%;
+            max-width: 960px;
+            background: var(--card);
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06), 0 12px 48px rgba(15, 23, 42, 0.14);
             overflow: hidden;
+            border-top: 4px solid var(--accent);
         }
 
-        header {
-            background: linear-gradient(135deg, #00b4db 0%, #0083b0 100%);
-            color: white;
-            padding: 50px 40px;
+        /* ── FULL-WIDTH HEADER ── */
+        .header {
+            background: var(--dark);
+            padding: 34px 40px 28px;
+            display: flex;
+            gap: 22px;
+            align-items: flex-start;
+            border-bottom: 1px solid rgba(14, 165, 233, 0.15);
+        }
+
+        .header-avatar {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background: var(--sidebar);
+            border: 2px solid rgba(14, 165, 233, 0.35);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 21px;
+            font-weight: 300;
+            color: var(--accent2);
+            letter-spacing: -1px;
+            flex-shrink: 0;
+        }
+
+        .header-info {
+            flex: 1;
+        }
+
+        .header-name {
+            font-size: 36px;
+            font-weight: 700;
+            color: #FFFFFF;
+            letter-spacing: -0.5px;
+            line-height: 1.05;
+            margin-bottom: 5px;
+        }
+
+        .header-role {
+            font-size: 10.5px;
+            font-weight: 600;
+            color: var(--accent);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 9px;
+        }
+
+        .header-tagline {
+            font-size: 12.5px;
+            color: rgba(255, 255, 255, 0.52);
+            line-height: 1.65;
+            max-width: 560px;
+            font-weight: 400;
+        }
+
+        /* ── BODY = sidebar + main ── */
+        .body {
+            display: flex;
+        }
+
+        /* ── SIDEBAR ── */
+        .sidebar {
+            width: var(--sidebar-w);
+            min-width: var(--sidebar-w);
+            background: var(--sidebar);
+            padding: 30px 20px 40px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .s-section {
+            margin-top: 26px;
+        }
+
+        .s-section:first-child {
+            margin-top: 0;
+        }
+
+        .s-label {
+            font-size: 8px;
+            font-weight: 700;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            color: var(--accent);
+            border-bottom: 1px solid rgba(14, 165, 233, 0.18);
+            padding-bottom: 6px;
+            margin-bottom: 14px;
+        }
+
+        .s-contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 9px;
+            margin-bottom: 10px;
+            font-size: 11.5px;
+            color: rgba(255, 255, 255, 0.68);
+            line-height: 1.4;
+        }
+
+        .s-contact-item .ico {
+            color: var(--accent);
+            font-size: 11.5px;
+            margin-top: 1.5px;
+            flex-shrink: 0;
+            width: 13px;
             text-align: center;
         }
 
-        header h1 {
-            font-size: 2.8em;
-            margin-bottom: 10px;
-            font-weight: 700;
-            letter-spacing: -0.5px;
-        }
-
-        .role {
-            font-size: 1.3em;
-            font-weight: 500;
-            opacity: 0.95;
-            margin-bottom: 20px;
-            letter-spacing: 1px;
-        }
-
-        .contact-info {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            flex-wrap: wrap;
-            font-size: 0.95em;
-            margin-top: 20px;
-        }
-
-        .contact-info a {
-            color: white;
+        .s-contact-item a {
+            color: rgba(255, 255, 255, 0.68);
             text-decoration: none;
-            transition: opacity 0.3s;
         }
 
-        .contact-info a:hover {
-            opacity: 0.8;
+        .s-contact-item a:hover {
+            color: var(--accent2);
         }
 
-        .summary {
-            padding: 40px;
-            background: #f0f8fb;
-            border-bottom: 3px solid #00b4db;
+        .s-skill-group {
+            margin-bottom: 15px;
         }
 
-        .summary p {
-            font-size: 1.05em;
-            line-height: 1.8;
-            color: #555;
-            font-style: italic;
+        .s-skill-group h4 {
+            font-size: 9px;
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.36);
+            text-transform: uppercase;
+            letter-spacing: 0.9px;
+            margin-bottom: 7px;
         }
 
-        main {
-            padding: 40px;
-        }
-
-        section {
-            margin-bottom: 45px;
-        }
-
-        section h2 {
-            font-size: 1.8em;
-            color: #0083b0;
-            margin-bottom: 25px;
-            padding-bottom: 10px;
-            border-bottom: 3px solid #00b4db;
+        .s-skill-pill {
             display: inline-block;
+            padding: 2.5px 8px;
+            background: rgba(14, 165, 233, 0.08);
+            border: 1px solid rgba(14, 165, 233, 0.22);
+            border-radius: 3px;
+            font-size: 10.5px;
+            color: rgba(255, 255, 255, 0.75);
+            margin: 2px 2px 2px 0;
+            line-height: 1.65;
+            font-weight: 400;
+        }
+
+        .s-edu-item {
+            margin-bottom: 15px;
+        }
+
+        .s-edu-degree {
+            font-size: 11px;
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.86);
+            line-height: 1.35;
+        }
+
+        .s-edu-school {
+            font-size: 10.5px;
+            color: var(--accent);
+            margin-top: 2px;
+        }
+
+        .s-edu-year {
+            font-size: 10px;
+            color: rgba(255, 255, 255, 0.32);
+            margin-top: 2px;
+        }
+
+        .s-lang-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 10px;
+        }
+
+        .s-lang-name {
+            font-size: 11.5px;
+            color: rgba(255, 255, 255, 0.75);
+            font-weight: 500;
+        }
+
+        .s-lang-level {
+            font-size: 9.5px;
+            color: var(--accent);
+            font-style: italic;
+            text-align: right;
+        }
+
+        .lang-dots {
+            display: flex;
+            gap: 3px;
+            margin-top: 3px;
+        }
+
+        .lang-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: rgba(14, 165, 233, 0.15);
+            border: 1px solid rgba(14, 165, 233, 0.35);
+        }
+
+        .lang-dot.filled {
+            background: var(--accent);
+            border-color: var(--accent);
+        }
+
+        /* ── MAIN ── */
+        .main {
+            flex: 1;
+            padding: 30px 36px 40px;
+        }
+
+        .m-section {
+            margin-bottom: 30px;
+        }
+
+        .m-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .m-label {
+            font-size: 8px;
+            font-weight: 700;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            color: var(--accent);
+            border-bottom: 1.5px solid var(--border);
+            padding-bottom: 7px;
+            margin-bottom: 22px;
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 4px;
+            top: 6px;
+            bottom: 6px;
+            width: 1px;
+            background: linear-gradient(to bottom, var(--accent) 0%, rgba(14, 165, 233, 0.12) 100%);
         }
 
         .job {
-            margin-bottom: 35px;
-            padding: 20px;
-            background: #f0f8fb;
-            border-radius: 8px;
-            border-left: 4px solid #00b4db;
-            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+            margin-bottom: 26px;
         }
 
-        .job:hover {
-            transform: translateX(5px);
-            box-shadow: 0 5px 15px rgba(0, 180, 219, 0.2);
+        .job:last-child {
+            margin-bottom: 0;
+        }
+
+        .job-dot {
+            position: absolute;
+            left: -20px;
+            top: 5px;
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+            background: var(--card);
+            border: 2px solid var(--accent);
+        }
+
+        .job:first-child .job-dot {
+            background: var(--accent);
+            width: 11px;
+            height: 11px;
+            left: -21px;
+            top: 4px;
+            box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.14);
         }
 
         .job-header {
             display: flex;
             justify-content: space-between;
-            align-items: start;
-            margin-bottom: 10px;
+            align-items: flex-start;
             flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        .company-branding {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .logo {
-            height: 36px;
-            width: auto;
-            object-fit: contain;
-            flex-shrink: 0;
-        }
-
-        .company-name {
-            font-size: 0.9em;
-            color: #0083b0;
-            font-weight: 600;
-            margin-top: 2px;
+            gap: 4px;
+            margin-bottom: 3px;
         }
 
         .job-title {
-            font-size: 1.3em;
+            font-size: 14px;
             font-weight: 700;
-            color: #333;
+            color: var(--text);
+            line-height: 1.25;
         }
 
-        .job-meta {
-            font-size: 0.95em;
-            color: #666;
+        .job-period {
+            font-size: 10.5px;
+            color: var(--muted);
+            white-space: nowrap;
+            padding: 2px 10px;
+            background: var(--ice);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            font-weight: 500;
+            margin-top: 2px;
+        }
+
+        .job-company-row {
             display: flex;
-            gap: 15px;
             align-items: center;
+            gap: 7px;
+            margin-bottom: 7px;
         }
 
-        .job-description ul {
+        .job-logo {
+            height: 16px;
+            width: auto;
+            object-fit: contain;
+            opacity: 0.82;
+        }
+
+        .job-company {
+            font-size: 11.5px;
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        .job-location {
+            font-size: 11px;
+            color: var(--muted);
+            font-style: italic;
+            font-weight: 400;
+        }
+
+        .job-bullets {
             list-style: none;
-            margin-top: 15px;
+            margin-top: 8px;
         }
 
-        .job-description li {
-            padding-left: 25px;
-            margin-bottom: 12px;
-            color: #555;
+        .job-bullets li {
+            padding-left: 14px;
             position: relative;
+            margin-bottom: 4px;
+            font-size: 12.5px;
+            color: #475569;
+            line-height: 1.6;
         }
 
-        .job-description li:before {
-            content: "▸";
+        .job-bullets li::before {
+            content: '';
             position: absolute;
             left: 0;
-            color: #00b4db;
-            font-weight: bold;
-            font-size: 1.2em;
+            top: 9px;
+            width: 5px;
+            height: 1.5px;
+            background: var(--accent);
         }
 
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 25px;
-            margin-top: 20px;
+        .job-bullets li strong {
+            color: var(--text);
+            font-weight: 600;
         }
 
-        .skill-category {
-            background: #f0f8fb;
-            padding: 20px;
-            border-radius: 8px;
-            border-top: 3px solid #00b4db;
-        }
-
-        .skill-category h3 {
-            color: #0083b0;
-            margin-bottom: 15px;
-            font-size: 1.1em;
-        }
-
-        .skill-tags {
+        .metrics-row {
             display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
+            margin: 12px 0 4px;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            overflow: hidden;
         }
 
-        .tag {
-            background: linear-gradient(135deg, #00b4db 0%, #0083b0 100%);
-            color: white;
-            padding: 8px 15px;
-            border-radius: 20px;
-            font-size: 0.9em;
-            font-weight: 500;
-        }
-
-        .education {
-            background: #f0f8fb;
-            padding: 20px;
-            border-radius: 8px;
-            border-left: 4px solid #00b4db;
-            margin-bottom: 20px;
-        }
-
-        .education h3 {
-            color: #333;
-            margin-bottom: 5px;
-            font-size: 1.1em;
-        }
-
-        .education-meta {
-            color: #0083b0;
-            font-size: 0.95em;
-            font-weight: 500;
-        }
-
-        .education-detail {
-            color: #666;
-            font-size: 0.95em;
-            margin-top: 5px;
-        }
-
-        .languages {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
-        }
-
-        .language {
-            background: #f0f8fb;
-            padding: 15px;
-            border-radius: 8px;
+        .metric {
+            flex: 1;
+            padding: 10px 10px;
+            background: var(--ice);
+            border-right: 1px solid var(--border);
             text-align: center;
-            border-top: 3px solid #00b4db;
         }
 
-        .language h3 {
-            color: #333;
-            margin-bottom: 5px;
+        .metric:last-child {
+            border-right: none;
         }
 
-        .language p {
-            color: #666;
-            font-size: 0.95em;
+        .metric-val {
+            display: block;
+            font-size: 17px;
+            font-weight: 700;
+            color: var(--accent);
+            line-height: 1;
         }
 
-        .hobbies {
-            background: #f0f8fb;
-            padding: 20px;
-            border-radius: 8px;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
+        .metric-lbl {
+            display: block;
+            font-size: 9.5px;
+            color: var(--muted);
+            margin-top: 3px;
+            font-weight: 500;
         }
 
-        .hobby-category h3 {
-            color: #0083b0;
-            margin-bottom: 10px;
-        }
-
-        .hobby-list {
-            list-style: none;
-        }
-
-        .hobby-list li {
-            padding: 5px 0;
-            color: #555;
-        }
-
-        .hobby-list li:before {
-            content: "◆ ";
-            margin-right: 8px;
-            color: #00b4db;
-        }
-
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 2em;
+        @media print {
+            body {
+                background: white;
+                padding: 0;
             }
 
-            .role {
-                font-size: 1.1em;
+            .cv {
+                box-shadow: none;
+                border-top: none;
+                border-radius: 0;
             }
 
-            .contact-info {
-                gap: 15px;
+            @page {
+                margin: 0.5in;
+                size: A4;
+            }
+        }
+
+        @media (max-width: 680px) {
+            body {
+                padding: 0;
             }
 
-            section h2 {
-                font-size: 1.5em;
+            .cv {
+                border-radius: 0;
+            }
+
+            .header {
+                flex-direction: column;
+                gap: 16px;
+                padding: 24px 20px;
+            }
+
+            .body {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                width: 100%;
+                min-width: unset;
+            }
+
+            .main {
+                padding: 20px;
             }
 
             .job-header {
                 flex-direction: column;
             }
 
-            .skills-grid {
-                grid-template-columns: 1fr;
+            .metrics-row {
+                flex-wrap: wrap;
+            }
+
+            .metric {
+                min-width: 45%;
             }
         }
     </style>
 </head>
 
 <body>
-    <div class="container">
-        <header>
-            <h1>Kashan Ali</h1>
-            <div class="role">☁️ Cloud Operations & Data Platform Engineer</div>
-            <div class="contact-info">
-                <a href="mailto:syedkashanali@gmail.com">📧 syedkashanali@gmail.com</a>
-                <a href="tel:+97451122031">📞 +974 511 22031</a>
-                <a href="https://linkedin.com/in/kashanalisyed" target="_blank">🔗 LinkedIn</a>
-                <span>🌍 Doha, Qatar</span>
+    <div class="cv">
+
+        <!-- FULL-WIDTH HEADER -->
+        <div class="header">
+            <div class="header-avatar">KA</div>
+            <div class="header-info">
+                <div class="header-name">Kashan Ali</div>
+                <div class="header-role">Cloud Operations &amp; Data Platform Engineer &middot; Petroleum Application
+                    Engineer</div>
+                <div class="header-tagline">16+ years spanning cloud engineering, data platform architecture, and IT
+                    operations across Oil &amp; Gas and Telecom. Expert in cloud-native data pipelines, observability,
+                    and FinOps-driven cost governance.</div>
             </div>
-        </header>
+        </div>
 
-        <section class="summary">
-            <p>Solution Architect & DevOps Specialist with deep expertise in Azure Data & AI services and over 16+ years
-                of experience driving Digital Transformation across Telecom, Energy, and IT sectors. Proven expertise in
-                automating infrastructure, optimizing cloud solutions, and leading cross-functional teams to deliver
-                scalable, secure, and cost-effective platforms. Adept at bridging business needs with technical
-                execution to deliver measurable business value.</p>
-        </section>
+        <!-- BODY: sidebar + main -->
+        <div class="body">
 
-        <main>
-            <section>
-                <h2>💼 Experience</h2>
-
-                <div class="job">
-                    <div class="job-header">
-                        <div class="company-branding">
-                            <img class="logo" src="noc-logo.png" alt="NOC Logo">
-                            <div>
-                                <div class="job-title">Digital Platform & DevOps Specialist Consultant</div>
-                                <div class="company-name">North Oil Company</div>
+            <!-- SIDEBAR -->
+            <aside class="sidebar">
+                <div class="s-section">
+                    <div class="s-label">Contact</div>
+                    <div class="s-contact-item">
+                        <span class="ico">&#x2709;</span>
+                        <a href="mailto:syedkashanali@gmail.com">syedkashanali@gmail.com</a>
+                    </div>
+                    <div class="s-contact-item">
+                        <span class="ico">&#x260E;</span>
+                        <span>+974 511 22031</span>
+                    </div>
+                    <div class="s-contact-item">
+                        <span class="ico">&#x2B55;</span>
+                        <a href="https://linkedin.com/in/kashanalisyed"
+                            target="_blank">linkedin.com/in/kashanalisyed</a>
+                    </div>
+                    <div class="s-contact-item">
+                        <span class="ico">&#x25CE;</span>
+                        <span>Doha, Qatar</span>
+                    </div>
+                </div>
+                <div class="s-section">
+                    <div class="s-label">Core Skills</div>
+                    <div class="s-skill-group">
+                        <h4>Cloud Platforms</h4>
+                        <span class="s-skill-pill">Azure</span>
+                        <span class="s-skill-pill">AWS</span>
+                        <span class="s-skill-pill">GCP</span>
+                        <span class="s-skill-pill">Hybrid Cloud</span>
+                        <span class="s-skill-pill">Serverless</span>
+                    </div>
+                    <div class="s-skill-group">
+                        <h4>Data Engineering</h4>
+                        <span class="s-skill-pill">Apache Flink</span>
+                        <span class="s-skill-pill">ETL / ELT</span>
+                        <span class="s-skill-pill">Data Pipelines</span>
+                        <span class="s-skill-pill">Real-time Analytics</span>
+                        <span class="s-skill-pill">Data Quality</span>
+                    </div>
+                    <div class="s-skill-group">
+                        <h4>Infrastructure</h4>
+                        <span class="s-skill-pill">Kubernetes</span>
+                        <span class="s-skill-pill">Docker</span>
+                        <span class="s-skill-pill">Terraform</span>
+                        <span class="s-skill-pill">Prometheus</span>
+                        <span class="s-skill-pill">Datadog</span>
+                        <span class="s-skill-pill">FinOps</span>
+                    </div>
+                    <div class="s-skill-group">
+                        <h4>Languages</h4>
+                        <span class="s-skill-pill">Python</span>
+                        <span class="s-skill-pill">Java</span>
+                        <span class="s-skill-pill">SQL</span>
+                        <span class="s-skill-pill">Bash</span>
+                    </div>
+                </div>
+                <div class="s-section">
+                    <div class="s-label">Education</div>
+                    <div class="s-edu-item">
+                        <div class="s-edu-degree">MBA &mdash; Industrial Management</div>
+                        <div class="s-edu-school">Blekinge Institute of Technology</div>
+                        <div class="s-edu-year">2019 &ndash; 2022</div>
+                    </div>
+                    <div class="s-edu-item">
+                        <div class="s-edu-degree">M.Sc. &mdash; Wireless Communication</div>
+                        <div class="s-edu-school">Chalmers University of Technology</div>
+                        <div class="s-edu-year">2009 &ndash; 2011</div>
+                    </div>
+                    <div class="s-edu-item">
+                        <div class="s-edu-degree">Diploma &mdash; Applied Data Science</div>
+                        <div class="s-edu-school">Ericsson AI Academy, Sweden</div>
+                        <div class="s-edu-year">2020 &middot; 11 weeks</div>
+                    </div>
+                </div>
+                <div class="s-section">
+                    <div class="s-label">Languages</div>
+                    <div class="s-lang-row">
+                        <div>
+                            <div class="s-lang-name">English</div>
+                            <div class="lang-dots">
+                                <div class="lang-dot filled"></div>
+                                <div class="lang-dot filled"></div>
+                                <div class="lang-dot filled"></div>
+                                <div class="lang-dot filled"></div>
+                                <div class="lang-dot filled"></div>
                             </div>
                         </div>
-                        <div class="job-meta">
-                            <span>📍 Doha, Qatar</span>
-                            <span>🗓 Aug 2023 – Present</span>
-                        </div>
+                        <div class="s-lang-level">Full Professional</div>
                     </div>
-                    <div class="job-description">
-                        <ul>
-                            <li><strong>Led DevSecOps strategy across hybrid cloud environments</strong>, embedding
-                                security into CI/CD pipelines and reducing vulnerability exposure.</li>
-                            <li><strong>Design & building solutions, guardrails, and platforms</strong> that enable AI
-                                to move from experimentation to production-grade adoption at scale using Agile
-                                principles.</li>
-                            <li><strong>Automated Data & Application platform deployments</strong> using IaC, reducing
-                                manual effort and enhancing processing speed and release quality.</li>
-                            <li><strong>Migrated legacy applications to Azure Cloud</strong>, providing end-to-end
-                                support across frontend and backend SDLC phases, ensuring performance continuity.</li>
-                            <li><strong>Implement cloud security and compliance measures</strong>, ensuring that NOC
-                                infrastructure meets industry standards and regulations.</li>
-                            <li><strong>Engineered secure pipelines</strong> using SAST, DAST, dependencies scanning,
-                                and secrets management with SonarCloud, Veracode, and GitHub Advanced Security.</li>
-                            <li><strong>Resolved critical software issues and implemented preventive measures</strong>
-                                for digital teams, improving sprint velocity by 25% and reducing deployment friction.
-                            </li>
-                            <li><strong>Achieved 30% cost reduction</strong> by reviewing agreements, proposing
-                                optimizations and implementing a consumption-based, data-driven approach.</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="job">
-                    <div class="job-header">
-                        <div class="company-branding">
-                            <img class="logo"
-                                src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Telia_Company_Logo.svg"
-                                alt="Telia Logo">
-                            <div>
-                                <div class="job-title">Data Platform Engineer</div>
-                                <div class="company-name">Telia Company</div>
+                    <div class="s-lang-row">
+                        <div>
+                            <div class="s-lang-name">Urdu</div>
+                            <div class="lang-dots">
+                                <div class="lang-dot filled"></div>
+                                <div class="lang-dot filled"></div>
+                                <div class="lang-dot filled"></div>
+                                <div class="lang-dot filled"></div>
+                                <div class="lang-dot filled"></div>
                             </div>
                         </div>
-                        <div class="job-meta">
-                            <span>📍 Sweden</span>
-                            <span>🗓 Mar 2022 – Jun 2023</span>
-                        </div>
+                        <div class="s-lang-level">Native</div>
                     </div>
-                    <div class="job-description">
-                        <ul>
-                            <li><strong>Architected and designed an API</strong> to provide rapid self-service
-                                recommendations for business users.</li>
-                            <li><strong>Designed and developed a Kubernetes containerized platform</strong> for internal
-                                users to address resource challenges for app deployment.</li>
-                            <li><strong>Integrated HashiCorp Vault for GitHub workflow</strong> actions to enhance
-                                security and encryption as a service.</li>
-                            <li><strong>Architected and implemented real-time streaming data analytics</strong> to
-                                evaluate product impacts on the market.</li>
-                            <li><strong>Implemented a tagging strategy</strong> using Terraform across the organization
-                                to organize and govern resources effectively.</li>
-                            <li><strong>Developed data visualizations</strong> that reduced Data Warehouse costs by 30%.
-                            </li>
-                            <li><strong>Led FinOps initiatives</strong> across the Data & Analytics platform to
-                                cultivate a mature financial management discipline and culture.</li>
-                            <li><strong>Setup Datadog dashboards</strong> for monitoring real-time and historical
-                                metrics and system alerts, ensuring operational excellence.</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="job">
-                    <div class="job-header">
-                        <div class="company-branding">
-                            <img class="logo"
-                                src="https://upload.wikimedia.org/wikipedia/commons/e/e9/Ericsson_logo.svg"
-                                alt="Ericsson Logo">
-                            <div>
-                                <div class="job-title">ICT Cloud Lead</div>
-                                <div class="company-name">Ericsson</div>
+                    <div class="s-lang-row">
+                        <div>
+                            <div class="s-lang-name">Swedish</div>
+                            <div class="lang-dots">
+                                <div class="lang-dot filled"></div>
+                                <div class="lang-dot filled"></div>
+                                <div class="lang-dot filled"></div>
+                                <div class="lang-dot"></div>
+                                <div class="lang-dot"></div>
                             </div>
                         </div>
-                        <div class="job-meta">
-                            <span>📍 Sweden</span>
-                            <span>🗓 Sep 2020 – Feb 2022</span>
-                        </div>
-                    </div>
-                    <div class="job-description">
-                        <ul>
-                            <li><strong>Provided cloud advisory</strong> to internal teams according to the
-                                Well-Architected Framework (WAF).</li>
-                            <li><strong>Helped successful migration of 100+ solutions</strong> in Amazon Web Services
-                                (AWS) public cloud with best practices.</li>
-                            <li><strong>Architected, designed, implemented and deployed Serverless Cost Management
-                                    solution</strong> for chargeback and show back.</li>
-                            <li><strong>Implemented (IaC) and developed application</strong> to provide self-service and
-                                secure infrastructure for consumer of Hybrid Cloud platform.</li>
-                            <li><strong>Proposed and led cross-cloud (AWS, Azure, GCP) architecture</strong> in access,
-                                network and security domain.</li>
-                        </ul>
+                        <div class="s-lang-level">Working</div>
                     </div>
                 </div>
+            </aside>
 
-                <div class="job">
-                    <div class="job-header">
-                        <div class="company-branding">
-                            <img class="logo"
-                                src="https://upload.wikimedia.org/wikipedia/commons/e/e9/Ericsson_logo.svg"
-                                alt="Ericsson Logo">
-                            <div>
-                                <div class="job-title">Senior Data Engineer</div>
-                                <div class="company-name">Ericsson</div>
+            <!-- MAIN -->
+            <div class="main">
+                <div class="m-section">
+                    <div class="m-label">Professional Experience</div>
+                    <div class="timeline">
+
+                        <!-- NEW: Application Engineer (Apr 2026 - Present) -->
+                        <div class="job">
+                            <div class="job-dot"></div>
+                            <div class="job-header">
+                                <div>
+                                    <div class="job-title">Application Engineer</div>
+                                    <div class="job-company-row">
+                                        <img src="noc-logo.png" class="job-logo" alt="NOC">
+                                        <span class="job-company">North Oil Company (NOC) &mdash; Digital Business
+                                            Solutions (DBS)</span>
+                                        <span class="job-location"> &middot; Doha, Qatar</span>
+                                    </div>
+                                </div>
+                                <div class="job-period">Apr 2026 &ndash; Present</div>
+                            </div>
+                            <ul class="job-bullets">
+
+                                <li>Assumed ownership of cloud operations and data platform services for the NOC DBS
+                                    petroleum application portfolio, transitioning formally from Petroleum Application
+                                    Engineer to Application Engineer.</li>
+                                <li>Leading cloud-native modernisation &mdash; containerising legacy petroleum workloads
+                                    and migrating to Kubernetes-native deployments, improving platform resilience and
+                                    deployment velocity.</li>
+                                <li>Designed and implemented end-to-end observability integrating distributed tracing,
+                                    log aggregation, and real-time alerting across <strong>30+ petroleum
+                                        applications</strong> in Drilling &amp; Wells and Reservoir &amp; Geoscience.
+                                </li>
+                                <li>Driving <strong>additional 15% cloud cost reduction</strong> through continuous
+                                    rightsizing, reserved instance strategy, and intelligent workload scheduling
+                                    optimisation.</li>
+                            </ul>
+                        </div>
+
+                        <!-- Petroleum Application Engineer (Aug 2023 - Mar 2026) -->
+                        <div class="job">
+                            <div class="job-dot"></div>
+                            <div class="job-header">
+                                <div>
+                                    <div class="job-title">Petroleum Application Engineer</div>
+                                    <div class="job-company-row">
+                                        <img src="noc-logo.png" class="job-logo" alt="NOC">
+                                        <span class="job-company">North Oil Company (NOC) &mdash; Digital Business
+                                            Solutions (DBS)</span>
+                                        <span class="job-location"> &middot; Doha, Qatar</span>
+                                    </div>
+                                </div>
+                                <div class="job-period">Aug 2023 &ndash; Mar 2026</div>
+                            </div>
+                            <ul class="job-bullets">
+
+                                <li>Governed and operated a <strong>portfolio of 30 petroleum applications</strong>
+                                    across Drilling &amp; Wells and Reservoir &amp; Geoscience, maintaining end-to-end
+                                    service health and SLA compliance.</li>
+                                <li>Managed <strong>15+ cloud and on-premises servers</strong> supporting
+                                    mission-critical oilfield workflows at Al Shaheen Oil Field &mdash; ensuring high
+                                    availability and disaster recovery readiness.</li>
+                                <li>Coordinated with <strong>20+ vendors</strong> (SLB, Halliburton, Peloton, Kappa) for
+                                    licence management, software upgrades, troubleshooting, and contract negotiations.
+                                </li>
+                                <li>Automated deployment pipelines and IaC workflows, <strong>cutting manual platform
+                                        effort by 40%</strong> and accelerating release cadence across the DBS
+                                    portfolio.</li>
+                                <li>Architected and built cloud guardrails and AI-readiness platforms enabling
+                                    <strong>production-grade adoption of AI solutions</strong> within the NOC digital
+                                    ecosystem.</li>
+                                <li>Implemented monitoring dashboards and automated alerting, improving <strong>service
+                                        availability by 20%</strong> and reducing mean time to resolution.</li>
+                                <li>Drove <strong>30% cost savings</strong> through licence optimisation, consumption
+                                    analytics, and vendor renegotiations.</li>
+                            </ul>
+                            <div class="metrics-row">
+                                <div class="metric"><span class="metric-val">30+</span><span class="metric-lbl">Apps
+                                        managed</span></div>
+                                <div class="metric"><span class="metric-val">20+</span><span
+                                        class="metric-lbl">Vendors</span></div>
+                                <div class="metric"><span class="metric-val">&minus;40%</span><span
+                                        class="metric-lbl">Manual effort</span></div>
+                                <div class="metric"><span class="metric-val">&minus;30%</span><span
+                                        class="metric-lbl">Cost reduction</span></div>
                             </div>
                         </div>
-                        <div class="job-meta">
-                            <span>📍 Sweden</span>
-                            <span>🗓 Jan 2018 – Aug 2020</span>
+
+                        <!-- Cloud Platform Engineer – Ericsson -->
+                        <div class="job">
+                            <div class="job-dot"></div>
+                            <div class="job-header">
+                                <div>
+                                    <div class="job-title">Cloud Platform Engineer</div>
+                                    <div class="job-company-row">
+                                        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e9/Ericsson_logo.svg"
+                                            class="job-logo" alt="Ericsson">
+                                        <span class="job-company">Ericsson</span>
+                                        <span class="job-location"> &middot; Sweden</span>
+                                    </div>
+                                </div>
+                                <div class="job-period">Mar 2022 &ndash; Jun 2023</div>
+                            </div>
+                            <ul class="job-bullets">
+
+                                <li>Architected and deployed a <strong>self-service API</strong> providing rapid,
+                                    data-driven product recommendations to business stakeholders across the
+                                    organisation.</li>
+                                <li>Designed and implemented <strong>real-time streaming data analytics</strong> using
+                                    Apache Flink to continuously evaluate product impact and market signals.</li>
+                                <li>Built a Kubernetes-native platform addressing resource constraints,
+                                    <strong>achieving 99.9% service uptime</strong> for critical services.</li>
+                                <li>Led <strong>FinOps discipline</strong> across the Data &amp; Analytics estate,
+                                    delivering 30% Data Warehouse cost reduction through utilisation analytics and
+                                    architectural optimisation.</li>
+                                <li>Integrated HashiCorp Vault for secrets management and implemented <strong>Terraform
+                                        tagging strategy</strong> for cross-org resource governance.</li>
+                                <li>Established <strong>Datadog monitoring suite</strong> with SLO tracking, capacity
+                                    alerting, and incident runbooks.</li>
+                            </ul>
                         </div>
-                    </div>
-                    <div class="job-description">
-                        <ul>
-                            <li><strong>Successfully designed and implemented</strong> scalable and high-performance
-                                distributed DataStream application with Data Quality focus.</li>
-                            <li><strong>Designed and implemented microservices for Data Pipeline</strong> to process
-                                network data and bring values.</li>
-                            <li><strong>Design and implementation of monitoring</strong> and integrated services to
-                                provide incident management using Prometheus and Grafana.</li>
-                            <li><strong>Designed and implemented datasets</strong> to ingest new data types, crunching
-                                and early transformation for Data Scientists and Analysts.</li>
-                            <li><strong>Containerized microservices Data solution</strong> using Docker and Kubernetes
-                                tools.</li>
-                            <li><strong>Designed and implemented ETL pipelines</strong> to curate raw data into
-                                provisioned datasets.</li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
 
-            <section>
-                <h2>🛠 Technical Skills</h2>
-                <div class="skills-grid">
-                    <div class="skill-category">
-                        <h3>Cloud Platforms</h3>
-                        <div class="skill-tags">
-                            <span class="tag">Azure Cloud</span>
-                            <span class="tag">AWS</span>
-                            <span class="tag">GCP</span>
-                            <span class="tag">Serverless</span>
-                            <span class="tag">Hybrid Cloud</span>
+                        <!-- ICT Cloud Lead – Ericsson -->
+                        <div class="job">
+                            <div class="job-dot"></div>
+                            <div class="job-header">
+                                <div>
+                                    <div class="job-title">ICT Cloud Lead</div>
+                                    <div class="job-company-row">
+                                        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e9/Ericsson_logo.svg"
+                                            class="job-logo" alt="Ericsson">
+                                        <span class="job-company">Ericsson</span>
+                                        <span class="job-location"> &middot; Sweden</span>
+                                    </div>
+                                </div>
+                                <div class="job-period">Sep 2020 &ndash; Feb 2022</div>
+                            </div>
+                            <ul class="job-bullets">
+
+                                <li>Delivered cloud advisory for <strong>100+ AWS migrations</strong>, applying
+                                    Well-Architected Framework principles across security, cost, and performance
+                                    pillars.</li>
+                                <li>Designed and deployed <strong>Serverless Cost Management</strong> (chargeback /
+                                    showback) enabling real-time cloud financial transparency for Ericsson business
+                                    units.</li>
+                                <li>Implemented cross-cloud governance framework across <strong>AWS, Azure, and
+                                        GCP</strong> covering network topology, identity access, and security controls.
+                                </li>
+                                <li>Developed self-service IaC platform enabling <strong>autonomous, policy-compliant
+                                        infrastructure provisioning</strong> for 500+ internal cloud consumers.</li>
+                            </ul>
                         </div>
-                    </div>
 
-                    <div class="skill-category">
-                        <h3>Data & Streaming</h3>
-                        <div class="skill-tags">
-                            <span class="tag">Data Pipelines</span>
-                            <span class="tag">Apache Flink</span>
-                            <span class="tag">ETL</span>
-                            <span class="tag">Data Quality</span>
-                            <span class="tag">Real-time Analytics</span>
+                        <!-- Senior Data Engineer – Ericsson -->
+                        <div class="job">
+                            <div class="job-dot"></div>
+                            <div class="job-header">
+                                <div>
+                                    <div class="job-title">Senior Data Engineer</div>
+                                    <div class="job-company-row">
+                                        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e9/Ericsson_logo.svg"
+                                            class="job-logo" alt="Ericsson">
+                                        <span class="job-company">Ericsson</span>
+                                        <span class="job-location"> &middot; Sweden</span>
+                                    </div>
+                                </div>
+                                <div class="job-period">Jan 2018 &ndash; Aug 2020</div>
+                            </div>
+                            <ul class="job-bullets">
+
+                                <li>Architected a <strong>scalable distributed DataStream application</strong> for
+                                    real-time telecom network data processing with end-to-end Data Quality enforcement.
+                                </li>
+                                <li>Designed and implemented <strong>microservices-based data pipelines</strong>,
+                                    containerized via Docker/Kubernetes, enabling independent scaling of each processing
+                                    stage.</li>
+                                <li>Built <strong>ETL pipelines and data ingestion frameworks</strong> transforming raw
+                                    network events into curated datasets for Data Science and Analytics teams.</li>
+                                <li>Delivered <strong>Prometheus/Grafana observability stack</strong> with real-time
+                                    alerting and incident management integration.</li>
+                            </ul>
                         </div>
-                    </div>
 
-                    <div class="skill-category">
-                        <h3>Container & Orchestration</h3>
-                        <div class="skill-tags">
-                            <span class="tag">Kubernetes</span>
-                            <span class="tag">Docker</span>
-                            <span class="tag">Helm</span>
-                            <span class="tag">Container Registry</span>
-                            <span class="tag">Microservices</span>
+                        <!-- DevOps Engineer – Ericsson -->
+                        <div class="job">
+                            <div class="job-dot"></div>
+                            <div class="job-header">
+                                <div>
+                                    <div class="job-title">DevOps Engineer</div>
+                                    <div class="job-company-row">
+                                        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e9/Ericsson_logo.svg"
+                                            class="job-logo" alt="Ericsson">
+                                        <span class="job-company">Ericsson</span>
+                                        <span class="job-location"> &middot; Sweden</span>
+                                    </div>
+                                </div>
+                                <div class="job-period">Aug 2015 &ndash; Dec 2017</div>
+                            </div>
+                            <ul class="job-bullets">
+
+                                <li>Built and maintained <strong>Jenkins CI/CD pipelines</strong> for radio base station
+                                    software &mdash; automating build, integration testing, and quality gates.</li>
+                                <li>Developed <strong>system-level test cases in Java (JCAT)</strong> and contributed to
+                                    GIT migration from ClearCase, improving source control maturity.</li>
+                            </ul>
                         </div>
-                    </div>
 
-                    <div class="skill-category">
-                        <h3>Infrastructure & Automation</h3>
-                        <div class="skill-tags">
-                            <span class="tag">Terraform</span>
-                            <span class="tag">Ansible</span>
-                            <span class="tag">Infrastructure as Code</span>
-                            <span class="tag">CloudFormation</span>
-                            <span class="tag">GitHub Actions</span>
+                        <!-- Earlier roles -->
+                        <div class="job">
+                            <div class="job-dot"></div>
+                            <div class="job-header">
+                                <div>
+                                    <div class="job-title">System Verification Engineer &rarr; Software Consultant</div>
+                                    <div class="job-company-row">
+                                        <span class="job-company">Ericsson / Combitech</span>
+                                        <span class="job-location"> &middot; Sweden</span>
+                                    </div>
+                                </div>
+                                <div class="job-period">2012 &ndash; 2015</div>
+                            </div>
+                            <ul class="job-bullets">
+                                <li>Built test automation frameworks in <strong>Python, Perl, and Bash</strong> and
+                                    executed regression suites across telecom hardware platforms.</li>
+                                <li>Provided software development and verification services for Ericsson, covering
+                                    architecture, business logic, and database management.</li>
+                            </ul>
                         </div>
-                    </div>
 
-                    <div class="skill-category">
-                        <h3>Monitoring & Observability</h3>
-                        <div class="skill-tags">
-                            <span class="tag">Prometheus</span>
-                            <span class="tag">Grafana</span>
-                            <span class="tag">Datadog</span>
-                            <span class="tag">ELK Stack</span>
-                            <span class="tag">Log Management</span>
-                        </div>
-                    </div>
-
-                    <div class="skill-category">
-                        <h3>Programming Languages</h3>
-                        <div class="skill-tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">Java</span>
-                            <span class="tag">Bash</span>
-                            <span class="tag">SQL</span>
-                            <span class="tag">JavaScript</span>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section>
-                <h2>🎓 Education</h2>
-
-                <div class="education">
-                    <h3>MBA Industrial Management</h3>
-                    <div class="education-meta">Blekinge Institute of Technology</div>
-                    <div class="education-detail">2019 - 2022</div>
-                </div>
-
-                <div class="education">
-                    <h3>Diploma Applied Data Science</h3>
-                    <div class="education-meta">Ericsson AI Academy, Sweden</div>
-                    <div class="education-detail">11 weeks in 2020</div>
-                </div>
-
-                <div class="education">
-                    <h3>M.Sc. Wireless Communication</h3>
-                    <div class="education-meta">Chalmers University of Technology</div>
-                    <div class="education-detail">2009 - 2011</div>
-                </div>
-            </section>
-
-            <section>
-                <h2>🌐 Languages</h2>
-                <div class="languages">
-                    <div class="language">
-                        <h3>English</h3>
-                        <p>Full Professional Proficiency</p>
-                    </div>
-                    <div class="language">
-                        <h3>Urdu</h3>
-                        <p>Native</p>
-                    </div>
-                    <div class="language">
-                        <h3>Swedish</h3>
-                        <p>Working Proficiency</p>
-                    </div>
-                </div>
-            </section>
-
-            <section>
-                <h2>🎯 Hobbies & Interests</h2>
-                <div class="hobbies">
-                    <div class="hobby-category">
-                        <h3>Sports</h3>
-                        <ul class="hobby-list">
-                            <li>Floor Hockey</li>
-                            <li>Tennis</li>
-                            <li>Badminton</li>
-                            <li>Football</li>
-                        </ul>
-                    </div>
-                    <div class="hobby-category">
-                        <h3>Passions</h3>
-                        <ul class="hobby-list">
-                            <li>Data Analytics</li>
-                            <li>Tech Meetups</li>
-                            <li>Cloud Innovation</li>
-                            <li>Reading & Learning</li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-        </main>
-    </div>
+                    </div><!-- /timeline -->
+                </div><!-- /m-section -->
+            </div><!-- /main -->
+        </div><!-- /body -->
+    </div><!-- /cv -->
 </body>
 
 </html>
