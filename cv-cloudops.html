@@ -125,6 +125,47 @@
             flex-direction: column;
         }
 
+        .cert-badges {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 30px;
+            padding-top: 25px;
+            border-top: 1px solid rgba(255, 255, 255, 0.25);
+        }
+
+        .cert-badge {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .cert-badge img {
+            height: 72px;
+            width: 72px;
+            object-fit: contain;
+            border-radius: 8px;
+            background: white;
+            padding: 4px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+            transition: transform 0.2s;
+        }
+
+        .cert-badge img:hover {
+            transform: scale(1.08);
+        }
+
+        .cert-badge span {
+            font-size: 0.72em;
+            opacity: 0.9;
+            text-align: center;
+            max-width: 90px;
+            line-height: 1.3;
+        }
+
         .s-section {
             margin-top: 26px;
         }
@@ -551,6 +592,28 @@
                         <span class="ico">&#x25CE;</span>
                         <span>Doha, Qatar</span>
                     </div>
+                    <div class="cert-badges">
+                        <div class="cert-badge">
+                            <img src="badges/aws-saa.png" alt="AWS Certified Solutions Architect – Associate"
+                                loading="lazy">
+                            <span>AWS Solutions Architect Associate</span>
+                        </div>
+                        <div class="cert-badge">
+                            <img src="badges/databricks-data-engineer.png"
+                                alt="Databricks Certified Data Engineer Associate" loading="lazy">
+                            <span>Databricks Data Engineer Associate</span>
+                        </div>
+                        <div class="cert-badge">
+                            <img src="badges/azure-data-engineer.png"
+                                alt="Microsoft Certified: Azure Data Engineer Associate" loading="lazy">
+                            <span>Azure Data Engineer Associate</span>
+                        </div>
+                        <div class="cert-badge">
+                            <img src="badges/azure-devops-expert.png"
+                                alt="Microsoft Certified: Azure DevOps Engineer Expert" loading="lazy">
+                            <span>Azure DevOps Engineer Expert</span>
+                        </div>
+                    </div>
                 </div>
                 <div class="s-section">
                     <div class="s-label">Core Skills</div>
@@ -688,12 +751,12 @@
                             </ul>
                         </div>
 
-                        <!-- Petroleum Application Engineer (Aug 2023 - Mar 2026) -->
+                        <!-- Digital Platform & DevOps Specialist Consultant (Aug 2023 - Mar 2026) -->
                         <div class="job">
                             <div class="job-dot"></div>
                             <div class="job-header">
                                 <div>
-                                    <div class="job-title">Petroleum Application Engineer</div>
+                                    <div class="job-title">Digital Platform & DevOps Specialist Consultant</div>
                                     <div class="job-company-row">
                                         <img src="noc-logo.png" class="job-logo" alt="NOC">
                                         <span class="job-company">North Oil Company (NOC) &mdash; Digital Business
@@ -704,26 +767,26 @@
                                 <div class="job-period">Aug 2023 &ndash; Mar 2026</div>
                             </div>
                             <ul class="job-bullets">
-
-                                <li>Governed and operated a <strong>portfolio of 30 petroleum applications</strong>
-                                    across Drilling &amp; Wells and Reservoir &amp; Geoscience, maintaining end-to-end
-                                    service health and SLA compliance.</li>
-                                <li>Managed <strong>15+ cloud and on-premises servers</strong> supporting
-                                    mission-critical oilfield workflows at Al Shaheen Oil Field &mdash; ensuring high
-                                    availability and disaster recovery readiness.</li>
-                                <li>Coordinated with <strong>20+ vendors</strong> (SLB, Halliburton, Peloton, Kappa) for
-                                    licence management, software upgrades, troubleshooting, and contract negotiations.
+                                <li><strong>Led DevSecOps strategy across hybrid cloud environments</strong>, embedding
+                                    security into CI/CD pipelines and reducing vulnerability exposure.</li>
+                                <li><strong>Design & building solutions, guardrails, and platforms</strong> that enable
+                                    AI
+                                    to move from experimentation to production-grade adoption at scale using Agile
+                                    principles.</li>
+                                <li><strong>Automated Data & Application platform deployments</strong> using IaC,
+                                    reducing
+                                    manual effort and enhancing processing speed and release quality.</li>
+                                <li><strong>Migrated legacy applications to Azure Cloud</strong>, providing end-to-end
+                                    support across frontend and backend SDLC phases, ensuring performance continuity.
                                 </li>
-                                <li>Automated deployment pipelines and IaC workflows, <strong>cutting manual platform
-                                        effort by 40%</strong> and accelerating release cadence across the DBS
-                                    portfolio.</li>
-                                <li>Architected and built cloud guardrails and AI-readiness platforms enabling
-                                    <strong>production-grade adoption of AI solutions</strong> within the NOC digital
-                                    ecosystem.</li>
-                                <li>Implemented monitoring dashboards and automated alerting, improving <strong>service
-                                        availability by 20%</strong> and reducing mean time to resolution.</li>
-                                <li>Drove <strong>30% cost savings</strong> through licence optimisation, consumption
-                                    analytics, and vendor renegotiations.</li>
+                                <li><strong>Engineered secure pipelines</strong> using SAST, DAST, dependencies
+                                    scanning,
+                                    and secrets management with SonarCloud, Veracode, and GitHub Advanced Security.</li>
+                                <li><strong>Improved system uptime by 20%</strong> through proactive monitoring,
+                                    incident
+                                    response automation, and root cause analysis.</li>
+                                <li><strong>Achieved 30% cost reduction</strong> by reviewing agreements, proposing
+                                    optimizations and implementing a consumption-based, data-driven approach.</li>
                             </ul>
                             <div class="metrics-row">
                                 <div class="metric"><span class="metric-val">30+</span><span class="metric-lbl">Apps
@@ -760,7 +823,8 @@
                                 <li>Designed and implemented <strong>real-time streaming data analytics</strong> using
                                     Apache Flink to continuously evaluate product impact and market signals.</li>
                                 <li>Built a Kubernetes-native platform addressing resource constraints,
-                                    <strong>achieving 99.9% service uptime</strong> for critical services.</li>
+                                    <strong>achieving 99.9% service uptime</strong> for critical services.
+                                </li>
                                 <li>Led <strong>FinOps discipline</strong> across the Data &amp; Analytics estate,
                                     delivering 30% Data Warehouse cost reduction through utilisation analytics and
                                     architectural optimisation.</li>

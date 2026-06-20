@@ -1,35 +1,54 @@
-# Kashan Ali CV Portfolio
+# Kashan Ali — CV Portfolio
 
-This repository contains a small static website for showcasing three professional CV profiles:
+A static personal portfolio website showcasing three professional CV profiles, built with plain HTML and Tailwind CSS.
 
-- DevOps Specialist
-- Solution Architect
-- CloudOps Specialist
+**Live site:** [skashan-ali.github.io/kashanali](https://skashan-ali.github.io/kashanali/)
+
+---
+
+## Profiles
+
+| Profile | File |
+|---|---|
+| DevOps Specialist | [cv-devops.html](cv-devops.html) |
+| Cloud Architect | [cv-cloud-architect.html](cv-cloud-architect.html) |
+| CloudOps Specialist | [cv-cloudops.html](cv-cloudops.html) |
+
+---
 
 ## Project structure
 
-- index.html — landing page with links to the three CV profiles
-- cv-devops.html — DevOps-focused curriculum vitae
-- cv-cloud-architect.html — cloud architecture and solution design profile
-- cv-cloudops.html — cloud operations and platform reliability profile
-- noc-logo.png — branding asset used by the site
+```
+kashanali/
+├── index.html               # Landing page with links to all three profiles
+├── cv-devops.html           # DevOps-focused curriculum vitae
+├── cv-cloud-architect.html  # Cloud architecture and solution design profile
+├── cv-cloudops.html         # Cloud operations and platform reliability profile
+└── noc-logo.png             # Branding asset
+```
+
+---
 
 ## Preview locally
 
-Because this is a simple static site, you can preview it by opening the HTML files directly in a browser, or by serving the folder with a local web server.
-
-Example with Python:
+Open any HTML file directly in a browser — no build step or server required:
 
 ```bash
-python -m http.server 8000
-```
+# Option 1: open the landing page directly
+start index.html
 
-Then open:
+## Tech stack
 
-```text
-https://skashan-ali.github.io/kashanali/
-```
+- **HTML5** — semantic markup
+- **[Tailwind CSS](https://tailwindcss.com/)** (CDN) — utility-first styling with an animated gradient background
+- No build tooling or dependencies required
 
-## Notes
+---
 
-The site uses Tailwind CSS via CDN for styling and is designed to be easy to host on any static hosting platform such as GitHub Pages, Azure Static Web Apps, or Netlify.
+## Hosting
+
+The site is pre-configured for [GitHub Pages](https://pages.github.com/) and can also be deployed to:
+
+- **Azure Static Web Apps** — free tier available
+- **Netlify** — drag-and-drop deploy from the repo root
+- Any static hosting service (S3, Cloudflare Pages, etc.)
